@@ -1,8 +1,8 @@
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
+import cv2                               # opencv 불러오기
+import numpy as np                       # numpy 불러오기
+from matplotlib import pyplot as plt     # matplotlib 에서 pyplot 불러오기
 
-img = cv2.imread('d.png',0)
-equ = cv2.equalizeHist(img)
-res = np.hstack((img,equ)) #stacking images side-by-side
-cv2.imwrite('res.png',res)
+img = cv2.imread('d.png',0)              # 이미지 읽어오기
+equ = cv2.equalizeHist(img)              # 히스토그램 균일화
+res = np.hstack((img,equ))               # 배열 행 합치기
+cv2.imwrite('res.png',res)               # 이미지 생성
